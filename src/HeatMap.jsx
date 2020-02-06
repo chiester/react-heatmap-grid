@@ -37,7 +37,7 @@ function HeatMap({
     />
   );
   return (
-    <div>
+    <div className="sensitivity-grid">
       {xLabelsLocation === "top" && xLabelsEle}
       <DataGrid
         {...{

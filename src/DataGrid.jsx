@@ -25,16 +25,17 @@ const DataGrid = ({
   const min = Math.min(...flatArray);
 
   return (
-    <div>
+    <div className="yLabels">
       {yLabels.map((y, yi) => (
         <div key={yi} style={{ display: "flex" }}>
           <FixedBox width={yLabelWidth}>
             <div
               style={{
-                textAlign: yLabelTextAlign,
-                paddingRight: "5px",
-                paddingTop: `${height / 3.7}px`,
-                width: `${yLabelWidth}px`
+                width: `${yLabelWidth}px`,
+                display: 'flex',
+                justifyContent: 'flex-end', 
+                alignItems: 'center',
+                paddingRight: '1rem'
               }}
             >
               {displayYLabels && y}
@@ -49,18 +50,22 @@ const DataGrid = ({
                 height,
                 width: squares ? `${height}px` : undefined,
                 flex: squares ? "none" : 1,
-                textAlign: "center",
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+                
               },
               cellStyle(background, value, min, max, data, xi, yi)
             );
             return (
               <div
+                className="cell"
                 onClick={onClick.bind(this, xi, yi)}
                 title={title(value, unit, xi, yi)}
                 key={`${xi}_${yi}`}
                 style={style}
               >
-                <div style={{ paddingTop: `${height / 3.7}px` }}>
+                <div style={{ display: 'flex' }}>
                   {cellRender(value, x, y)}
                 </div>
               </div>
