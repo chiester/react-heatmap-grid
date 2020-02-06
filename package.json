@@ -1,6 +1,6 @@
 {
-  "name": "react-heatmap-grid",
-  "version": "0.8.1",
+  "name": "react-heatmap-grid-mod",
+  "version": "0.8.3",
   "description": "React component for heatmap on grid layout",
   "main": "dist/bundle.js",
   "scripts": {
@@ -8,10 +8,10 @@
     "dev": "NODE_ENV=dev webpack-dev-server",
     "build": "rimraf dist && eslint src && NODE_ENV=prod webpack"
   },
-  "author": "Arun Ghosh",
+  "author": "Arun Ghosh, Chris Hiester",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arunghosh/react-heatmap-grid"
+    "url": "https://github.com/chiester/react-heatmap-grid"
   },
   "keywords": [
     "heatmap",

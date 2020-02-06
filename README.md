@@ -69,6 +69,7 @@ ReactDOM.render(
 |cellRender|function|Render custom content in cell|`() => null`|
 |cellStyle|function|To set custom cell style. It is useful for using own colour scheme||
 |title|function|To render custom title in each cell|`${value} ${unit}`|
+|dataGridClass|string|className of parent of data grid|
 
 Example
 ```javascript
@@ -103,6 +104,7 @@ ReactDOM.render(
     })}
     cellRender={value => value && `${value}%`}
     title={(value, unit) => `${value}`}
+    dataGridClass="my-grid"
   />,
   document.getElementById("app")
 );
