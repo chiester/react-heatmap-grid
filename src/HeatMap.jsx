@@ -20,7 +20,8 @@ function HeatMap({
   squares,
   cellRender,
   cellStyle,
-  title
+  title,
+  dataGridClass
 }) {
   let cursor = "";
   if (onClick !== undefined) {
@@ -37,7 +38,7 @@ function HeatMap({
     />
   );
   return (
-    <div className="sensitivity-grid">
+    <div className={dataGridClass}>
       {xLabelsLocation === "top" && xLabelsEle}
       <DataGrid
         {...{

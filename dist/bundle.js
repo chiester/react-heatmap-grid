@@ -655,7 +655,8 @@ function HeatMap(_ref) {
       squares = _ref.squares,
       cellRender = _ref.cellRender,
       cellStyle = _ref.cellStyle,
-      title = _ref.title;
+      title = _ref.title,
+      dataGridClass = _ref.dataGridClass;
 
   var cursor = "";
   if (onClick !== undefined) {
@@ -671,7 +672,7 @@ function HeatMap(_ref) {
   });
   return _react2.default.createElement(
     "div",
-    { className: "sensitivity-grid" },
+    { className: dataGridClass },
     xLabelsLocation === "top" && xLabelsEle,
     _react2.default.createElement(_DataGrid2.default, {
       xLabels: xLabels,
